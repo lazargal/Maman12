@@ -19,7 +19,7 @@ public abstract class MyShape implements Cloneable
     // m_p1 getter
     public Point getP1()
     {
-	return m_p1;
+	return (Point)m_p1.clone();
     }
 
     // m_p1 setter
@@ -31,7 +31,7 @@ public abstract class MyShape implements Cloneable
     // m_p2 getter
     public Point getP2()
     {
-	return m_p2;
+	return (Point)m_p2.clone();
     }
 
     // m_p2 setter
@@ -43,7 +43,7 @@ public abstract class MyShape implements Cloneable
     // m_myColor getter
     public Color getMyColor()
     {
-	return m_myColor;
+	return new Color(m_myColor.getRGB());
     }
 
     // m_myColor setter
